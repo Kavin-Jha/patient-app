@@ -1,0 +1,6 @@
+framework module Pods_PatientAppTests {
+  umbrella header "Pods-PatientAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

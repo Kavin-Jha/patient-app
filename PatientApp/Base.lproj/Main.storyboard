@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Enter Patient details-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="PatientApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q7d-sX-drQ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7E-kZ-qSf">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="127.66666666666667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set an appointment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rh-c6-w05">
+                                                <rect key="frame" x="23.666666666666657" y="56" width="346" height="45.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="37"/>
+                                                <color key="textColor" red="0.92549026010000002" green="0.92941176889999999" blue="0.92549026010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="0rh-c6-w05" firstAttribute="centerY" secondItem="E7E-kZ-qSf" secondAttribute="centerY" constant="15" id="28D-ft-WfW"/>
+                                            <constraint firstItem="0rh-c6-w05" firstAttribute="centerX" secondItem="E7E-kZ-qSf" secondAttribute="centerX" id="JIO-bS-nLe"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQV-fV-djh">
+                                        <rect key="frame" x="0.0" y="127.66666666666669" width="393" height="724.33333333333326"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9BU-4A-Oqm">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="724.33333333333337"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fjl-dT-BEC"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RvC-9X-roX"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="9BU-4A-Oqm" firstAttribute="leading" secondItem="LQV-fV-djh" secondAttribute="leading" id="5p1-vt-AU4"/>
+                                            <constraint firstAttribute="trailing" secondItem="9BU-4A-Oqm" secondAttribute="trailing" id="fXs-bV-Fhh"/>
+                                            <constraint firstItem="9BU-4A-Oqm" firstAttribute="top" secondItem="LQV-fV-djh" secondAttribute="top" id="hCM-Jo-xh6"/>
+                                            <constraint firstAttribute="bottom" secondItem="9BU-4A-Oqm" secondAttribute="bottom" id="s2L-ua-flL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E7E-kZ-qSf" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="BFM-Zq-PB0"/>
+                            <constraint firstItem="Q7d-sX-drQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bf5-xx-WZH"/>
+                            <constraint firstItem="Q7d-sX-drQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HET-qv-nY4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q7d-sX-drQ" secondAttribute="trailing" id="VEx-j0-7EM"/>
+                            <constraint firstAttribute="bottom" secondItem="Q7d-sX-drQ" secondAttribute="bottom" id="nhf-lj-YWp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Enter Patient details" id="x8B-Ty-gff"/>
+                    <connections>
+                        <outlet property="formTableView" destination="9BU-4A-Oqm" id="Zdb-TA-g5h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874.0458015267175" y="3.5211267605633805"/>
+        </scene>
+        <!--Thanky You Controller-->
+        <scene sceneID="WgY-lu-Dc5">
+            <objects>
+                <viewController storyboardIdentifier="ThankyYouController" id="sd5-FV-FMW" customClass="ThankyYouController" customModule="PatientApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gkd-dd-DIS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGr-jA-txg">
+                                <rect key="frame" x="96" y="400.66666666666669" width="201" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will be in touch." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV5-ZZ-D0B">
+                                <rect key="frame" x="123" y="445.66666666666669" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aB7-l7-ma8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dV5-ZZ-D0B" firstAttribute="centerX" secondItem="Gkd-dd-DIS" secondAttribute="centerX" id="EvU-XS-sFf"/>
+                            <constraint firstItem="mGr-jA-txg" firstAttribute="centerX" secondItem="Gkd-dd-DIS" secondAttribute="centerX" id="boO-dL-Zek"/>
+                            <constraint firstItem="mGr-jA-txg" firstAttribute="centerY" secondItem="Gkd-dd-DIS" secondAttribute="centerY" id="kjk-5j-cZT"/>
+                            <constraint firstItem="dV5-ZZ-D0B" firstAttribute="centerY" secondItem="Gkd-dd-DIS" secondAttribute="centerY" constant="30" id="sHc-EI-mCz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V9F-HL-4BZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2609.9236641221373" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

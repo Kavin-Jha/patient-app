@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="KGk-i7-Jjw" customClass="SubmitButttonTableViewCell" customModule="PatientApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="362" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLT-22-0Dr">
+                        <rect key="frame" x="20" y="12" width="322" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="y6p-ns-jMD"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Submit" cornerStyle="capsule">
+                            <backgroundConfiguration key="background">
+                                <color key="backgroundColor" red="0.2802798695" green="0.61662840060000002" blue="0.59698827190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="strokeColor" systemColor="labelColor"/>
+                            </backgroundConfiguration>
+                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="submitalldata:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="q5n-xq-jYw"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="vLT-22-0Dr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0rD-IX-ccG"/>
+                    <constraint firstAttribute="trailing" secondItem="vLT-22-0Dr" secondAttribute="trailing" constant="20" id="28g-L1-4DT"/>
+                    <constraint firstItem="vLT-22-0Dr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Umm-pv-J9l"/>
+                    <constraint firstAttribute="bottom" secondItem="vLT-22-0Dr" secondAttribute="bottom" constant="17" id="hgD-HV-6Mh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="68.702290076335871" y="12.323943661971832"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
